@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThaliCheck — AI-Based School &amp; Anganwadi Meal Nutrition Monitoring System</title>
+    <script>
+      // If someone opens frontend/index.html directly on raw.githack.com instead of root index.html,
+      // redirect automatically to the compiled self-contained root index.html
+      if (
+        typeof window !== "undefined" &&
+        (window.location.hostname.includes("githack.com") ||
+          window.location.hostname.includes("github.io")) &&
+        window.location.pathname.includes("/frontend/index.html")
+      ) {
+        window.location.replace(
+          window.location.href.replace("/frontend/index.html", "/index.html")
+        );
+      }
+    </script>
   </head>
   <body class="bg-slate-50 text-slate-900 antialiased selection:bg-emerald-600 selection:text-white">
     <div id="root"></div>
