@@ -1,3 +1,5 @@
+import { handleStaticFallbackRequest } from "./localFallbackEngine";
+
 const API_BASE = import.meta.env.VITE_API_BASE_URL || "/api";
 
 export function getStoredToken() {
@@ -23,7 +25,21 @@ export function clearStoredAuth() {
   localStorage.removeItem("thalicheck_user");
 }
 
+function isStaticHostEnvironment() {
+  if (typeof window === "undefined") return false;
+  const host = window.location.hostname || "";
+  return (
+    host.includes("githack.com") ||
+    host.includes("github.io") ||
+    window.location.protocol === "file:"
+  );
+}
+
 async function request(path, options = {}) {
+  if (isStaticHostEnvironment()) {
+    return handleStaticFallbackRequest(path, options);
+  }
+
   const token = getStoredToken();
   const headers = { ...(options.headers || {}) };
 
@@ -40,10 +56,9 @@ async function request(path, options = {}) {
       ...options,
       headers,
     });
-  } catch (err) {
-    throw new Error(
-      "Backend server unavailable. Ensure the FastAPI backend is running on http://127.0.0.1:8000."
-    );
+  } catch {
+    // If local FastAPI is not running, fall back gracefully so static previews work
+    return handleStaticFallbackRequest(path, options);
   }
 
   let data = null;
@@ -51,11 +66,18 @@ async function request(path, options = {}) {
   if (contentType.includes("application/json")) {
     data = await response.json();
   } else {
+    // If a static file server returned HTML for /api/*, use the static fallback store
+    if (contentType.includes("text/html")) {
+      return handleStaticFallbackRequest(path, options);
+    }
     const text = await response.text();
     data = { detail: text };
   }
 
   if (!response.ok) {
+    if (response.status === 404 && !contentType.includes("application/json")) {
+      return handleStaticFallbackRequest(path, options);
+    }
     const msg =
       (data && (data.detail || data.message)) ||
       `Request failed with HTTP status ${response.status}`;

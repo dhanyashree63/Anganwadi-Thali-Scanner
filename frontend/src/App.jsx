@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import { api, getStoredUser } from "./services/api";
 import AppLayout from "./layouts/AppLayout";
 import LoginPage from "./pages/LoginPage";
@@ -33,12 +33,12 @@ export default function App() {
 
   if (!user) {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/login" element={<LoginPage setUser={setUser} />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 
@@ -48,7 +48,7 @@ export default function App() {
       : "/staff-dashboard";
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppLayout user={user} setUser={setUser} activeModel={activeModel}>
         <Routes>
           <Route
@@ -90,6 +90,6 @@ export default function App() {
           <Route path="*" element={<Navigate to={defaultHome} replace />} />
         </Routes>
       </AppLayout>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
