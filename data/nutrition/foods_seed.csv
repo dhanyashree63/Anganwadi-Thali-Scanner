@@ -1,0 +1,12 @@
+code,name,category,calories_per_100g,protein_per_100g,carbs_per_100g,fat_per_100g,fiber_per_100g,density_g_per_ml,source,source_reference,verified,last_reviewed,is_recipe_based
+rice,Rice,Grains & Staples,130.0,2.7,28.2,0.3,0.4,0.85,IFCT 2017,IFCT 2017 Boiled Milled Rice Reference (Seed - Unverified),false,,false
+dal,Dal,Pulses & Legumes,116.0,7.2,18.4,1.5,2.1,0.98,IFCT 2017,IFCT 2017 Cooked Red Gram Dal Reference (Seed - Unverified),false,,true
+sambar,Sambar,Recipe Dishes,78.0,3.6,11.8,1.8,1.9,1.02,school recipe,Standard School Kitchen Sambar Formulation (Seed - Unverified),false,,true
+vegetable_curry,Vegetable Curry,Recipe Dishes,92.0,2.4,13.5,3.2,2.8,0.90,school recipe,Standard Mixed Vegetable Curry Recipe (Seed - Unverified),false,,true
+chapati,Chapati,Grains & Staples,297.0,9.8,56.4,3.7,3.9,0.55,IFCT 2017,IFCT 2017 Whole Wheat Roti Reference (Seed - Unverified),false,,false
+ragi_mudde,Ragi Mudde,Grains & Staples,142.0,3.3,30.5,0.6,3.6,1.05,IFCT 2017,IFCT 2017 Finger Millet Ball Reference (Seed - Unverified),false,,false
+curd,Curd,Dairy,61.0,3.5,4.7,3.3,0.0,1.03,IFCT 2017,IFCT 2017 Cow Milk Curd Reference (Seed - Unverified),false,,false
+egg,Egg,Animal Protein,155.0,12.6,1.1,10.6,0.0,1.00,IFCT 2017,IFCT 2017 Boiled Poultry Egg Reference (Seed - Unverified),false,,false
+fruits,Fruits,Fruits,89.0,1.1,22.8,0.3,2.6,0.75,IFCT 2017,IFCT 2017 Banana / Seasonal Fruit Reference (Seed - Unverified),false,,false
+vegetables,Vegetables,Vegetables,55.0,2.1,9.8,0.8,3.1,0.72,IFCT 2017,IFCT 2017 Steamed Mixed Vegetables Reference (Seed - Unverified),false,,false
+unknown,Unknown / Other,Other,,,,0.0,0.0,0.80,user-entered,Out-of-distribution or Empty Compartment Placeholder,false,,false

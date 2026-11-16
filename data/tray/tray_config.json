@@ -1,0 +1,93 @@
+{
+  "tray_name": "Standardized 5-Compartment School Thali Tray",
+  "version": "1.0.0",
+  "tray_width_cm": 32.0,
+  "tray_height_cm": 24.0,
+  "marker": {
+    "type": "high_contrast_cyan_square",
+    "side_length_cm": 3.0,
+    "target_rgb": [0, 190, 210],
+    "rgb_tolerance": 75,
+    "expected_region": {
+      "x_rel_min": 0.0,
+      "x_rel_max": 0.25,
+      "y_rel_min": 0.0,
+      "y_rel_max": 0.30
+    }
+  },
+  "compartments": [
+    {
+      "id": "comp_1",
+      "name": "Top-Left Bowl (Dal / Sambar)",
+      "shape": "circle",
+      "width_cm": 8.0,
+      "height_cm": 8.0,
+      "depth_cm": 3.5,
+      "volume_ml": 175.0,
+      "rel_bbox": [0.18, 0.06, 0.42, 0.38]
+    },
+    {
+      "id": "comp_2",
+      "name": "Top-Center Bowl (Vegetable Curry)",
+      "shape": "circle",
+      "width_cm": 8.0,
+      "height_cm": 8.0,
+      "depth_cm": 3.5,
+      "volume_ml": 175.0,
+      "rel_bbox": [0.45, 0.06, 0.69, 0.38]
+    },
+    {
+      "id": "comp_3",
+      "name": "Top-Right Bowl (Curd / Side / Egg)",
+      "shape": "circle",
+      "width_cm": 7.5,
+      "height_cm": 7.5,
+      "depth_cm": 3.2,
+      "volume_ml": 140.0,
+      "rel_bbox": [0.72, 0.06, 0.94, 0.38]
+    },
+    {
+      "id": "comp_4",
+      "name": "Bottom-Left Main Well (Rice / Staple)",
+      "shape": "rounded_rect",
+      "width_cm": 15.0,
+      "height_cm": 11.0,
+      "depth_cm": 3.0,
+      "volume_ml": 380.0,
+      "rel_bbox": [0.06, 0.44, 0.56, 0.93]
+    },
+    {
+      "id": "comp_5",
+      "name": "Bottom-Right Flat Well (Chapati / Fruit / Salad)",
+      "shape": "rounded_rect",
+      "width_cm": 11.5,
+      "height_cm": 11.0,
+      "depth_cm": 2.5,
+      "volume_ml": 250.0,
+      "rel_bbox": [0.60, 0.44, 0.94, 0.93]
+    }
+  ],
+  "default_meal_mapping": {
+    "LUNCH": {
+      "comp_1": "Dal",
+      "comp_2": "Vegetable Curry",
+      "comp_3": "Curd",
+      "comp_4": "Rice",
+      "comp_5": "Chapati"
+    },
+    "BREAKFAST": {
+      "comp_1": "Sambar",
+      "comp_2": "Vegetable Curry",
+      "comp_3": "Egg",
+      "comp_4": "Ragi Mudde",
+      "comp_5": "Fruits"
+    },
+    "SNACK": {
+      "comp_1": "Dal",
+      "comp_2": "Vegetables",
+      "comp_3": "Curd",
+      "comp_4": "Rice",
+      "comp_5": "Fruits"
+    }
+  }
+}

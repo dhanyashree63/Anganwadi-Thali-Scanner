@@ -1,0 +1,26 @@
+{
+  "smoke_test_only": true,
+  "warning": "SYNTHETIC SMOKE-TEST DATASET ONLY. Any model trained on this dataset must be tagged smoke_test_only=True.",
+  "total_samples": 132,
+  "classes": [
+    "rice",
+    "dal",
+    "sambar",
+    "vegetable_curry",
+    "chapati",
+    "curd",
+    "egg",
+    "ragi_mudde",
+    "fruits",
+    "vegetables",
+    "unknown"
+  ],
+  "sessions": [
+    "smoke_sess_01",
+    "smoke_sess_02",
+    "smoke_sess_03",
+    "smoke_sess_04",
+    "smoke_sess_05",
+    "smoke_sess_06"
+  ]
+}

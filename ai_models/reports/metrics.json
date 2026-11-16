@@ -1,0 +1,463 @@
+{
+  "model_version": "smoke-test-mobilenet_v3_small-0215b327",
+  "dataset_hash": "0215b3273cb53c5e",
+  "smoke_test_only": true,
+  "evaluated_at": "2026-11-16T16:15:38.747043+00:00",
+  "test_set_size": 22,
+  "test_sessions_count": 1,
+  "classes": [
+    "chapati",
+    "curd",
+    "dal",
+    "egg",
+    "fruits",
+    "ragi_mudde",
+    "rice",
+    "sambar",
+    "unknown",
+    "vegetable_curry",
+    "vegetables"
+  ],
+  "classification": {
+    "top1_accuracy": 0.0909,
+    "top3_accuracy": 0.2727,
+    "macro_f1": 0.0152,
+    "per_class": [
+      {
+        "food_class": "chapati",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "curd",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "dal",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "egg",
+        "precision": 0.0909,
+        "recall": 1.0,
+        "f1_score": 0.1667,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "fruits",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "ragi_mudde",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "rice",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "sambar",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "unknown",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "vegetable_curry",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      },
+      {
+        "food_class": "vegetables",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "test_images": 2,
+        "test_sessions": 1
+      }
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "portion_estimation": {
+    "overall": {
+      "mae_grams": 6.18,
+      "mape_pct": 5.27,
+      "median_ape_pct": 6.16,
+      "bias_grams": -1.16,
+      "range_coverage_pct": 95.0,
+      "evaluated_samples": 20
+    },
+    "per_food": [
+      {
+        "food_class": "chapati",
+        "samples": 2,
+        "mae_grams": 2.8,
+        "mape_pct": 3.29,
+        "median_ape_pct": 3.29,
+        "bias_grams": -2.8,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "curd",
+        "samples": 2,
+        "mae_grams": 4.85,
+        "mape_pct": 6.21,
+        "median_ape_pct": 6.21,
+        "bias_grams": 4.85,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "dal",
+        "samples": 2,
+        "mae_grams": 7.75,
+        "mape_pct": 6.35,
+        "median_ape_pct": 6.35,
+        "bias_grams": 7.75,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "egg",
+        "samples": 2,
+        "mae_grams": 2.6,
+        "mape_pct": 4.48,
+        "median_ape_pct": 4.48,
+        "bias_grams": 2.6,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "fruits",
+        "samples": 2,
+        "mae_grams": 4.6,
+        "mape_pct": 4.98,
+        "median_ape_pct": 4.98,
+        "bias_grams": -2.0,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "ragi_mudde",
+        "samples": 2,
+        "mae_grams": 8.7,
+        "mape_pct": 4.99,
+        "median_ape_pct": 4.99,
+        "bias_grams": -2.6,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "rice",
+        "samples": 2,
+        "mae_grams": 7.4,
+        "mape_pct": 5.03,
+        "median_ape_pct": 5.03,
+        "bias_grams": -4.2,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "sambar",
+        "samples": 2,
+        "mae_grams": 17.75,
+        "mape_pct": 12.22,
+        "median_ape_pct": 12.22,
+        "bias_grams": -17.75,
+        "range_coverage_pct": 50.0
+      },
+      {
+        "food_class": "vegetable_curry",
+        "samples": 2,
+        "mae_grams": 1.7,
+        "mape_pct": 1.67,
+        "median_ape_pct": 1.67,
+        "bias_grams": -0.7,
+        "range_coverage_pct": 100.0
+      },
+      {
+        "food_class": "vegetables",
+        "samples": 2,
+        "mae_grams": 3.6,
+        "mape_pct": 3.49,
+        "median_ape_pct": 3.49,
+        "bias_grams": 3.3,
+        "range_coverage_pct": 100.0
+      }
+    ]
+  },
+  "nutrition_estimation": {
+    "calorie_mae_kcal": 6.78,
+    "calorie_mape_pct": 5.27,
+    "protein_mae_g": 0.26,
+    "protein_mape_pct": 5.19
+  },
+  "status_agreement": {
+    "agreement_rate": 0.8,
+    "false_reassurance_rate": 0.0,
+    "false_reassurance_count": 0,
+    "total_true_shortfalls": 12
+  },
+  "calibration": {
+    "ece": 0.0033,
+    "low_confidence_threshold": 0.35,
+    "low_confidence_flag_precision": 0.9091,
+    "low_confidence_flag_recall": 1.0,
+    "reliability_table": [
+      {
+        "bin_label": "0.0-0.1",
+        "bin_mid": 0.05,
+        "count": 22,
+        "mean_confidence": 0.094,
+        "empirical_accuracy": 0.091,
+        "calibration_gap": 0.003
+      },
+      {
+        "bin_label": "0.1-0.2",
+        "bin_mid": 0.15,
+        "count": 0,
+        "mean_confidence": 0.15,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.2-0.3",
+        "bin_mid": 0.25,
+        "count": 0,
+        "mean_confidence": 0.25,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.3-0.4",
+        "bin_mid": 0.35,
+        "count": 0,
+        "mean_confidence": 0.35,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.4-0.5",
+        "bin_mid": 0.45,
+        "count": 0,
+        "mean_confidence": 0.45,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.5-0.6",
+        "bin_mid": 0.55,
+        "count": 0,
+        "mean_confidence": 0.55,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.6-0.7",
+        "bin_mid": 0.65,
+        "count": 0,
+        "mean_confidence": 0.65,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.7-0.8",
+        "bin_mid": 0.75,
+        "count": 0,
+        "mean_confidence": 0.75,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.8-0.9",
+        "bin_mid": 0.85,
+        "count": 0,
+        "mean_confidence": 0.85,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      },
+      {
+        "bin_label": "0.9-1.0",
+        "bin_mid": 0.95,
+        "count": 0,
+        "mean_confidence": 0.95,
+        "empirical_accuracy": 0.0,
+        "calibration_gap": 0.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "version_tag": "smoke-test-mobilenet_v3_small-0215b327",
+  "architecture": "mobilenet_v3_small",
+  "weights_filename": "smoke-test-mobilenet_v3_small-0215b327.pt",
+  "weights_path": "C:\\Users\\HP\\Desktop\\ThaliCheck\\ai_models\\weights\\smoke-test-mobilenet_v3_small-0215b327.pt",
+  "classes": [
+    "chapati",
+    "curd",
+    "dal",
+    "egg",
+    "fruits",
+    "ragi_mudde",
+    "rice",
+    "sambar",
+    "unknown",
+    "vegetable_curry",
+    "vegetables"
+  ],
+  "image_size": [
+    128,
+    128
+  ],
+  "trained_at": "2026-11-16T16:15:24.725527+00:00",
+  "dataset_hash": "0215b3273cb53c5e",
+  "smoke_test_only": true,
+  "train_samples": 88,
+  "val_samples": 22,
+  "test_samples": 22,
+  "temperature_scale": 1.0,
+  "low_confidence_threshold": 0.35,
+  "val_low_conf_flag_precision": 0.909,
+  "val_low_conf_flag_recall": 1.0
+}

@@ -1,0 +1,12 @@
+food_class,precision,recall,f1_score,test_images,test_sessions
+chapati,0.0,0.0,0.0,2,1
+curd,0.0,0.0,0.0,2,1
+dal,0.0,0.0,0.0,2,1
+egg,0.0909,1.0,0.1667,2,1
+fruits,0.0,0.0,0.0,2,1
+ragi_mudde,0.0,0.0,0.0,2,1
+rice,0.0,0.0,0.0,2,1
+sambar,0.0,0.0,0.0,2,1
+unknown,0.0,0.0,0.0,2,1
+vegetable_curry,0.0,0.0,0.0,2,1
+vegetables,0.0,0.0,0.0,2,1

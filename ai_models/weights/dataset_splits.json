@@ -1,0 +1,1211 @@
+{
+  "dataset_hash": "0215b3273cb53c5e",
+  "smoke_test_only": true,
+  "classes": [
+    "chapati",
+    "curd",
+    "dal",
+    "egg",
+    "fruits",
+    "ragi_mudde",
+    "rice",
+    "sambar",
+    "unknown",
+    "vegetable_curry",
+    "vegetables"
+  ],
+  "train": [
+    {
+      "image_path": "rice/rice_smoke_sess_02_001.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "129.8",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_03_002.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "172.2",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_04_003.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "130.2",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_05_004.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "131.0",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_02_007.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "129.5",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_03_008.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "156.9",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_04_009.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "142.1",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_05_010.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "179.8",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_02_001.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "117.6",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_03_002.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "100.9",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_04_003.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "113.5",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_05_004.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "119.2",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_02_007.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "119.0",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_03_008.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "111.2",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_04_009.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "100.6",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_05_010.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "127.0",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_02_001.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "144.8",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_03_002.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "148.2",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_04_003.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "116.3",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_05_004.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "113.4",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_02_007.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "118.2",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_03_008.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "108.0",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_04_009.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "147.7",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_05_010.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "126.7",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_02_001.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "98.9",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_03_002.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "128.1",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_04_003.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "100.9",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_05_004.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "104.4",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_02_007.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "101.6",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_03_008.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "97.5",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_04_009.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "109.0",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_05_010.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "122.6",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_02_001.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "86.0",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_03_002.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "75.3",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_04_003.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "87.3",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_05_004.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "63.4",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_02_007.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "77.2",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_03_008.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "65.4",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_04_009.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "70.4",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_05_010.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "76.6",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_02_001.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "102.9",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_03_002.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "88.8",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_04_003.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "96.5",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_05_004.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "80.8",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_02_007.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "80.8",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_03_008.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "100.3",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_04_009.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "105.4",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_05_010.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "101.2",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_02_001.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "51.0",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_03_002.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "45.6",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_04_003.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "47.8",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_05_004.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "47.5",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_02_007.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "58.0",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_03_008.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "53.1",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_04_009.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "62.3",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_05_010.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "59.3",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_02_001.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "183.2",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_03_002.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "156.6",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_04_003.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "184.2",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_05_004.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "163.7",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_02_007.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "144.9",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_03_008.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "140.7",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_04_009.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "143.3",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_05_010.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "135.4",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_02_001.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "91.9",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_03_002.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "86.0",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_04_003.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "87.3",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_05_004.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "93.2",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_02_007.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "79.7",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_03_008.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "76.0",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_04_009.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "70.5",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_05_010.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "98.4",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_02_001.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "91.2",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_03_002.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "79.2",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_04_003.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "80.6",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_05_004.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "87.3",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_02_007.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "107.8",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_03_008.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "92.5",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_04_009.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "78.5",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_05_010.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "78.6",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_02_001.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_03_002.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_04_003.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_05_004.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_02_007.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_02",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_03_008.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_03",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_04_009.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_04",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_05_010.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_05",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    }
+  ],
+  "val": [
+    {
+      "image_path": "rice/rice_smoke_sess_01_000.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "166.2",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_01_006.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "161.9",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_01_000.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "109.5",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_01_006.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "131.6",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_01_000.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "121.3",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_01_006.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "112.2",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_01_000.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "91.4",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_01_006.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "104.8",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_01_000.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "85.1",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_01_006.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "75.4",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_01_000.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "103.6",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_01_006.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "79.1",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_01_000.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "59.1",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_01_006.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "56.9",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_01_000.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "182.9",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_01_006.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "152.4",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_01_000.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "82.1",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_01_006.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "99.1",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_01_000.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "100.9",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_01_006.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "102.6",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_01_000.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_01_006.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_01",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    }
+  ],
+  "test": [
+    {
+      "image_path": "rice/rice_smoke_sess_06_005.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "139.8",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "rice/rice_smoke_sess_06_011.jpg",
+      "food_class": "rice",
+      "compartment_id": "comp_4",
+      "weighed_grams": "149.3",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_06_005.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "105.0",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "dal/dal_smoke_sess_06_011.jpg",
+      "food_class": "dal",
+      "compartment_id": "comp_1",
+      "weighed_grams": "135.7",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_06_005.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "151.5",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "sambar/sambar_smoke_sess_06_011.jpg",
+      "food_class": "sambar",
+      "compartment_id": "comp_1",
+      "weighed_grams": "135.8",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_06_005.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "106.5",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetable_curry/vegetable_curry_smoke_sess_06_011.jpg",
+      "food_class": "vegetable_curry",
+      "compartment_id": "comp_2",
+      "weighed_grams": "99.7",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_06_005.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "65.4",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "chapati/chapati_smoke_sess_06_011.jpg",
+      "food_class": "chapati",
+      "compartment_id": "comp_5",
+      "weighed_grams": "85.5",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_06_005.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "78.0",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "curd/curd_smoke_sess_06_011.jpg",
+      "food_class": "curd",
+      "compartment_id": "comp_3",
+      "weighed_grams": "78.2",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_06_005.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "55.1",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "egg/egg_smoke_sess_06_011.jpg",
+      "food_class": "egg",
+      "compartment_id": "comp_3",
+      "weighed_grams": "58.2",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_06_005.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "173.2",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "ragi_mudde/ragi_mudde_smoke_sess_06_011.jpg",
+      "food_class": "ragi_mudde",
+      "compartment_id": "comp_4",
+      "weighed_grams": "175.1",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_06_005.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "93.3",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "fruits/fruits_smoke_sess_06_011.jpg",
+      "food_class": "fruits",
+      "compartment_id": "comp_5",
+      "weighed_grams": "91.9",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_06_005.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "104.2",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "vegetables/vegetables_smoke_sess_06_011.jpg",
+      "food_class": "vegetables",
+      "compartment_id": "comp_2",
+      "weighed_grams": "83.2",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_06_005.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    },
+    {
+      "image_path": "unknown/unknown_smoke_sess_06_011.jpg",
+      "food_class": "unknown",
+      "compartment_id": "comp_3",
+      "weighed_grams": "0.0",
+      "session_id": "smoke_sess_06",
+      "photographer": "smoke_test_generator",
+      "lighting_note": "synthetic_smoke_only"
+    }
+  ]
+}

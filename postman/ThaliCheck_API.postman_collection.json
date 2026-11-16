@@ -1,0 +1,156 @@
+{
+  "info": {
+    "name": "ThaliCheck — AI Meal Nutrition Monitoring API",
+    "_postman_id": "a7f9c120-8831-41e0-9c2a-thalicheck001",
+    "description": "Complete Postman REST API Collection for ThaliCheck (Real-Accuracy Edition). Covers JWT Auth, Schools, Meal Capture & Analysis, Quality Gate, Officer Dashboard, Verification, Audit Trail, Dataset Collection, Scale Calibration, and PyTorch Model Training/Evaluation.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Auth - Login (Officer)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"officer@thalicheck.gov.in\",\n  \"password\": \"Officer@123\"\n}"
+        }
+      }
+    },
+    {
+      "name": "2. Schools - List Schools",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/schools"
+      }
+    },
+    {
+      "name": "3. Schools - Get School Statistics",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/schools/1/statistics?include_demo=false"
+      }
+    },
+    {
+      "name": "4. Meals - Create Meal Record",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "{{baseUrl}}/meals",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"school_id\": 1,\n  \"meal_date\": \"2026-11-15\",\n  \"meal_type\": \"LUNCH\",\n  \"scheme\": \"PM POSHAN\",\n  \"age_group\": \"6-10 years (Primary)\",\n  \"children_served\": 95,\n  \"is_demo\": true\n}"
+        }
+      }
+    },
+    {
+      "name": "5. Meals - Run AI Analysis (Demo Preset)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/meals/1/analyze",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            { "key": "demo_preset", "value": "potential_shortfall", "type": "text" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "6. Dashboard - Officer Summary & Anomaly Alerts",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/dashboard/summary?include_demo=false"
+      }
+    },
+    {
+      "name": "7. Dashboard - Nutrition & Shortfall Trends",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/dashboard/trends?include_demo=false"
+      }
+    },
+    {
+      "name": "8. Verification - Pending Queue",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/verification/pending"
+      }
+    },
+    {
+      "name": "9. Verification - Submit Officer Portion Correction",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Authorization", "value": "Bearer {{token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": "{{baseUrl}}/verification/3",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"action\": \"CORRECT_PORTION\",\n  \"detection_id\": 14,\n  \"corrected_grams\": 125.0,\n  \"reason\": \"Verified manually on kitchen scale\",\n  \"notes\": \"Officer field inspection\"\n}"
+        }
+      }
+    },
+    {
+      "name": "10. Dataset - Get Collection Progress",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/dataset/progress"
+      }
+    },
+    {
+      "name": "11. Model - Active Model Status",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/model/active"
+      }
+    },
+    {
+      "name": "12. Model - Held-Out Test Evaluation Metrics",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/model/metrics"
+      }
+    },
+    {
+      "name": "13. Calibration - Fit Scale Regression Models",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/calibration/fit"
+      }
+    },
+    {
+      "name": "14. Tray Config - Get Standardized Tray Layout",
+      "request": {
+        "method": "GET",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }],
+        "url": "{{baseUrl}}/tray-config"
+      }
+    }
+  ]
+}
