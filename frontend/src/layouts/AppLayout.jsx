@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { clearStoredAuth } from "../services/api";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function AppLayout({ user, setUser, activeModel, children }) {
   const navigate = useNavigate();
@@ -129,6 +130,8 @@ export default function AppLayout({ user, setUser, activeModel, children }) {
                 Role: {user?.role}
               </div>
             </div>
+
+            <ThemeToggle />
 
             <button
               onClick={handleLogout}

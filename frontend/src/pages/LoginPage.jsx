@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { api, setStoredAuth } from "../services/api";
+import ThemeToggle from "../components/ThemeToggle";
 
 export default function LoginPage({ setUser }) {
   const navigate = useNavigate();
@@ -39,7 +40,16 @@ export default function LoginPage({ setUser }) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center bg-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen flex flex-col justify-center bg-slate-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="absolute top-4 right-4 flex items-center gap-3">
+        <Link
+          to="/thalishare"
+          className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-2 text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-sm hover:bg-slate-50 dark:hover:bg-slate-700"
+        >
+          🤝 ThaliShare
+        </Link>
+        <ThemeToggle />
+      </div>
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-700 text-xl font-extrabold text-white shadow-md">
           TC

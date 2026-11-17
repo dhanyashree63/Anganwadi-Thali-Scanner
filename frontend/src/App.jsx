@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate, Link } from "react-router-dom";
 import { api, getStoredUser } from "./services/api";
 import AppLayout from "./layouts/AppLayout";
+import ThemeToggle from "./components/ThemeToggle";
 import LoginPage from "./pages/LoginPage";
 import StaffDashboardPage from "./pages/StaffDashboardPage";
 import MealCapturePage from "./pages/MealCapturePage";
@@ -40,7 +41,16 @@ export default function App() {
           <Route
             path="/thalishare"
             element={
-              <div className="min-h-screen bg-slate-50 p-4 sm:p-8 max-w-7xl mx-auto">
+              <div className="min-h-screen bg-slate-50 dark:bg-slate-900 p-4 sm:p-8 max-w-7xl mx-auto">
+                <div className="flex justify-between items-center mb-6 pb-3 border-b border-slate-200 dark:border-slate-800">
+                  <Link
+                    to="/login"
+                    className="inline-flex items-center gap-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-sm hover:bg-slate-100 dark:hover:bg-slate-700"
+                  >
+                    ← Back to Login
+                  </Link>
+                  <ThemeToggle />
+                </div>
                 <ThaliSharePage user={null} />
               </div>
             }
