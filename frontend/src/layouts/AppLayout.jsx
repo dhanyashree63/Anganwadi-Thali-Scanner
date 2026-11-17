@@ -60,6 +60,11 @@ export default function AppLayout({ user, setUser, activeModel, children }) {
       label: "Admin & Calibration",
       roles: ["ADMIN"],
     },
+    {
+      to: "/thalishare",
+      label: "🤝 ThaliShare (Contribute)",
+      roles: ["STAFF", "OFFICER", "ADMIN"],
+    },
   ].filter((item) => item.roles.includes(role));
 
   return (

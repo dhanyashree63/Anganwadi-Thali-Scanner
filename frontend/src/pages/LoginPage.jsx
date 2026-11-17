@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { api, setStoredAuth } from "../services/api";
 
 export default function LoginPage({ setUser }) {
@@ -140,6 +140,15 @@ export default function LoginPage({ setUser }) {
 
           <div className="mt-5 rounded-lg bg-slate-50 p-3 text-[11px] text-slate-600 leading-relaxed">
             <strong>Notice:</strong> AI nutrition outputs are statistical estimates with uncertainty ranges intended for monitoring and early warning, not clinical or administrative enforcement.
+          </div>
+
+          <div className="mt-4 border-t border-slate-200 pt-4 text-center">
+            <Link
+              to="/thalishare"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-emerald-700 bg-emerald-50 px-4 py-2.5 text-xs font-bold text-emerald-900 hover:bg-emerald-100 transition"
+            >
+              <span>🤝 ThaliShare – Community Contributions Portal</span>
+            </Link>
           </div>
         </div>
       </div>

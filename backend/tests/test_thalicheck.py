@@ -488,3 +488,75 @@ def test_end_to_end_meal_analysis_verification_and_banners(client: TestClient):
     assert dash_res.status_code == 200
     assert "school_patterns" in dash_res.json()
     assert "anomalies" in dash_res.json()
+
+
+def test_thalishare_community_contributions_and_verified_only_rule(client: TestClient):
+    # 1. Verified live impact statistics default to 0 (excluding demo records)
+    live_impact = client.get("/thalishare/impact?include_demo=false")
+    assert live_impact.status_code == 200
+    assert live_impact.json()["include_demo"] is False
+
+    # 2. Register an unverified organization and verify it cannot receive contributions
+    unver_res = client.post(
+        "/thalishare/foundations",
+        json={
+            "name": "Unverified Applicant NGO",
+            "logo_initials": "UAN",
+            "description": "Pending verification test organization",
+            "mission": "Child nutrition support",
+            "areas_of_operation": ["Bengaluru Urban"],
+            "initiatives_supported": ["School Meal Sponsorship"],
+            "verified": False,
+            "is_demo": False,
+        },
+    )
+    assert unver_res.status_code == 201
+    unver_id = unver_res.json()["id"]
+
+    blocked_contrib = client.post(
+        "/thalishare/contributions",
+        json={
+            "full_name": "Priya Sharma",
+            "email": "priya@example.org",
+            "phone": "9876543210",
+            "contributor_category": "INDIVIDUAL",
+            "foundation_id": unver_id,
+            "contribution_type": "MONETARY",
+            "amount_inr": 2500.0,
+            "meals_supported_est": 100,
+            "children_reached_est": 50,
+        },
+    )
+    assert blocked_contrib.status_code == 400
+    assert "verification" in blocked_contrib.json()["detail"].lower()
+
+    # 3. Admin verifies the organization, then contributor submits an enquiry and tracks it
+    admin_headers = _auth_header(client, "admin@thalicheck.gov.in", "Admin@123")
+    ver_res = client.put(f"/thalishare/foundations/{unver_id}/verify?verified=true", headers=admin_headers)
+    assert ver_res.status_code == 200
+    assert ver_res.json()["verified"] is True
+
+    ok_contrib = client.post(
+        "/thalishare/contributions",
+        json={
+            "full_name": "Priya Sharma",
+            "email": "priya@example.org",
+            "phone": "9876543210",
+            "contributor_category": "INDIVIDUAL",
+            "foundation_id": unver_id,
+            "contribution_type": "MONETARY",
+            "amount_inr": 2500.0,
+            "meals_supported_est": 100,
+            "children_reached_est": 50,
+            "is_demo": False,
+        },
+    )
+    assert ok_contrib.status_code == 201
+    ref = ok_contrib.json()["tracking_ref"]
+    assert ref.startswith("TS-")
+
+    track_res = client.get(f"/thalishare/track?query={ref}")
+    assert track_res.status_code == 200
+    assert len(track_res.json()) == 1
+    assert track_res.json()[0]["full_name"] == "Priya Sharma"
+

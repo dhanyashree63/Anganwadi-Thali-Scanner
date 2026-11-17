@@ -13,6 +13,7 @@ import AuditLogPage from "./pages/AuditLogPage";
 import DataCollectionPage from "./pages/DataCollectionPage";
 import ModelPerformancePage from "./pages/ModelPerformancePage";
 import AdminManagementPage from "./pages/AdminManagementPage";
+import ThaliSharePage from "./pages/ThaliSharePage";
 
 export default function App() {
   const [user, setUser] = useState(() => getStoredUser());
@@ -36,6 +37,14 @@ export default function App() {
       <HashRouter>
         <Routes>
           <Route path="/login" element={<LoginPage setUser={setUser} />} />
+          <Route
+            path="/thalishare"
+            element={
+              <div className="min-h-screen bg-slate-50 p-4 sm:p-8 max-w-7xl mx-auto">
+                <ThaliSharePage user={null} />
+              </div>
+            }
+          />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </HashRouter>
@@ -87,6 +96,10 @@ export default function App() {
             }
           />
           <Route path="/admin" element={<AdminManagementPage />} />
+          <Route
+            path="/thalishare"
+            element={<ThaliSharePage user={user} />}
+          />
           <Route path="*" element={<Navigate to={defaultHome} replace />} />
         </Routes>
       </AppLayout>

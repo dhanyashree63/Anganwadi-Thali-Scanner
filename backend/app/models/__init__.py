@@ -395,3 +395,56 @@ class ModelEvaluation(Base):
     evaluated_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
 
     model_version = relationship("ModelVersion", back_populates="evaluations")
+
+
+class ThaliShareFoundation(Base):
+    __tablename__ = "thalishare_foundations"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String(255), nullable=False)
+    logo_initials = Column(String(16), nullable=False, default="NGO")
+    description = Column(Text, nullable=False)
+    mission = Column(Text, nullable=False)
+    registration_status = Column(String(128), nullable=False, default="PENDING_ADMIN_VERIFICATION")
+    registration_reference = Column(String(128), nullable=True)
+    areas_of_operation = Column(JSON, nullable=False, default=list)
+    initiatives_supported = Column(JSON, nullable=False, default=list)
+    contribution_types = Column(JSON, nullable=False, default=list)
+    official_website = Column(String(512), nullable=True)
+    contact_email = Column(String(255), nullable=True)
+    contact_phone = Column(String(64), nullable=True)
+    verified = Column(Boolean, default=False, nullable=False)
+    is_demo = Column(Boolean, default=False, nullable=False)
+    utilization_summary = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
+
+    contributions = relationship("ThaliShareContribution", back_populates="foundation", cascade="all, delete-orphan")
+
+
+class ThaliShareContribution(Base):
+    __tablename__ = "thalishare_contributions"
+
+    id = Column(Integer, primary_key=True, index=True)
+    tracking_ref = Column(String(64), unique=True, index=True, nullable=False)
+    foundation_id = Column(Integer, ForeignKey("thalishare_foundations.id"), nullable=False, index=True)
+    full_name = Column(String(255), nullable=False)
+    email = Column(String(255), index=True, nullable=False)
+    phone = Column(String(64), nullable=False)
+    contributor_category = Column(String(64), nullable=False, default="INDIVIDUAL")
+    contribution_type = Column(String(64), nullable=False)  # MONETARY, FOOD_SUPPLIES, SCHOOL_SPONSORSHIP, INITIATIVE_SUPPORT
+    amount_inr = Column(Float, nullable=True)
+    supply_details = Column(JSON, nullable=True)
+    school_id = Column(Integer, ForeignKey("schools.id"), nullable=True)
+    school_name = Column(String(255), nullable=True)
+    initiative_name = Column(String(255), nullable=True)
+    meals_supported_est = Column(Integer, nullable=False, default=0)
+    children_reached_est = Column(Integer, nullable=False, default=0)
+    message = Column(Text, nullable=True)
+    status = Column(String(64), nullable=False, default="ENQUIRY_RECORDED")
+    receipt_note = Column(Text, nullable=True)
+    utilization_report = Column(Text, nullable=True)
+    is_demo = Column(Boolean, default=False, nullable=False)
+    created_at = Column(DateTime(timezone=True), default=utcnow, nullable=False)
+
+    foundation = relationship("ThaliShareFoundation", back_populates="contributions")
+

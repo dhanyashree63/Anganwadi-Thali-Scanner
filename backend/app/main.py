@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from app.config import settings, PROJECT_ROOT
 from app.database import Base, SessionLocal, engine
 from app.routes.api_routes import router as api_router
+from app.routes.thalishare_routes import thalishare_router
 
 logger = logging.getLogger("thalicheck")
 
@@ -66,6 +67,7 @@ data_dir.mkdir(parents=True, exist_ok=True)
 app.mount("/static-files", StaticFiles(directory=str(data_dir)), name="static-files")
 
 app.include_router(api_router)
+app.include_router(thalishare_router)
 
 
 @app.get("/health")

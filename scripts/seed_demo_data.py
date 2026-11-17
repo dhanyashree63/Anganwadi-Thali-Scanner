@@ -41,6 +41,8 @@ from app.models import (
     Recipe,
     RecipeIngredient,
     School,
+    ThaliShareContribution,
+    ThaliShareFoundation,
     TrayConfig,
     User,
     VerificationRecord,
@@ -804,6 +806,95 @@ def seed_all_data(db: Session) -> dict:
                         )
                     )
             db.commit()
+
+    # 12. Seed ThaliShare Demo Templates (explicitly marked is_demo=True; no invented registration numbers or URLs)
+    if db.query(ThaliShareFoundation).count() == 0:
+        demo_f1 = ThaliShareFoundation(
+            name="[DEMO TEMPLATE] District School Nutrition Partner Trust",
+            logo_initials="DSN",
+            description="Demonstration profile showing how a verified partner organization appears in the ThaliShare directory.",
+            mission="Support supplementary protein, pulses, and seasonal fruit distribution in government primary schools.",
+            registration_status="Demo Verification Completed (Sample Profile Only)",
+            registration_reference=None,
+            areas_of_operation=["Bengaluru Urban", "Mysuru"],
+            initiatives_supported=[
+                "Protein & Pulse Supplementation",
+                "Seasonal Fruit & Micronutrient Drive",
+                "School Meal Sponsorship",
+            ],
+            contribution_types=["MONETARY", "FOOD_SUPPLIES", "SCHOOL_SPONSORSHIP", "INITIATIVE_SUPPORT"],
+            official_website=None,
+            contact_email=None,
+            contact_phone=None,
+            verified=True,
+            is_demo=True,
+            utilization_summary="Sample Demo Record: No live funds or external links associated with this template.",
+        )
+        demo_f2 = ThaliShareFoundation(
+            name="[DEMO TEMPLATE] Anganwadi Early Childhood Nutrition Collective",
+            logo_initials="AEC",
+            description="Demonstration profile for ICDS Anganwadi early-childhood nutrition and kitchen equipment support.",
+            mission="Strengthen morning breakfast and hot-cooked meal adequacy across rural Anganwadi centres.",
+            registration_status="Demo Verification Completed (Sample Profile Only)",
+            registration_reference=None,
+            areas_of_operation=["Dharwad", "Mysuru"],
+            initiatives_supported=[
+                "Anganwadi Protein & Egg Addition",
+                "Approved Dry Ration & Grocery Support",
+                "Kitchen Digital Scale & Standardized Tray Support",
+            ],
+            contribution_types=["FOOD_SUPPLIES", "SCHOOL_SPONSORSHIP", "INITIATIVE_SUPPORT"],
+            official_website=None,
+            contact_email=None,
+            contact_phone=None,
+            verified=True,
+            is_demo=True,
+            utilization_summary="Sample Demo Record: Used only to demonstrate ThaliShare filtering and enquiry workflows.",
+        )
+        demo_f3 = ThaliShareFoundation(
+            name="[DEMO TEMPLATE] Pending Applicant Organization (Unverified Example)",
+            logo_initials="PAO",
+            description="Demonstration profile showing an organization whose verification has not yet been completed.",
+            mission="Applicant awaiting administrative verification of registration documents.",
+            registration_status="Pending Document Verification — Ineligible for Contributions",
+            registration_reference=None,
+            areas_of_operation=["Bengaluru Urban"],
+            initiatives_supported=["School Meal Sponsorship"],
+            contribution_types=["MONETARY"],
+            official_website=None,
+            contact_email=None,
+            contact_phone=None,
+            verified=False,
+            is_demo=True,
+            utilization_summary=None,
+        )
+        db.add_all([demo_f1, demo_f2, demo_f3])
+        db.flush()
+
+        db.add(
+            ThaliShareContribution(
+                tracking_ref="TS-DEMO-0001",
+                foundation_id=demo_f1.id,
+                full_name="Demo Contributor (Sample Record)",
+                email="demo.contributor@example.org",
+                phone="0000000000",
+                contributor_category="INDIVIDUAL",
+                contribution_type="SCHOOL_SPONSORSHIP",
+                amount_inr=None,
+                supply_details={"sponsorship_note": "Sample 1-month supplementary pulse support"},
+                school_id=primary_school.id if primary_school else None,
+                school_name=primary_school.name if primary_school else "Sample School",
+                initiative_name="Protein & Pulse Supplementation",
+                meals_supported_est=120,
+                children_reached_est=60,
+                message="Sample demo enquiry illustrating contribution tracking.",
+                status="ENQUIRY_RECORDED",
+                receipt_note="Demo sample record (is_demo = true). Excluded from verified live platform statistics by default.",
+                utilization_report="Sample utilization entry for UI demonstration.",
+                is_demo=True,
+            )
+        )
+        db.commit()
 
     return {
         "schools": db.query(School).count(),

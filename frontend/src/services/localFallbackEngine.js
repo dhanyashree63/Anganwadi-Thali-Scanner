@@ -429,6 +429,117 @@ function createInitialStore() {
     auditLogs,
     candidateSamples: [],
     metrics: INITIAL_SMOKE_METRICS,
+    thalishareFoundations: [
+      {
+        id: 1,
+        name: "[DEMO TEMPLATE] District School Nutrition Partner Trust",
+        logo_initials: "DSN",
+        description:
+          "Demonstration profile showing how a verified partner organization appears in the ThaliShare directory.",
+        mission:
+          "Support supplementary protein, pulses, and seasonal fruit distribution in government primary schools.",
+        registration_status: "Demo Verification Completed (Sample Profile Only)",
+        registration_reference: null,
+        areas_of_operation: ["Bengaluru Urban", "Mysuru"],
+        initiatives_supported: [
+          "Protein & Pulse Supplementation",
+          "Seasonal Fruit & Micronutrient Drive",
+          "School Meal Sponsorship",
+        ],
+        contribution_types: [
+          "MONETARY",
+          "FOOD_SUPPLIES",
+          "SCHOOL_SPONSORSHIP",
+          "INITIATIVE_SUPPORT",
+        ],
+        official_website: null,
+        contact_email: null,
+        contact_phone: null,
+        verified: true,
+        eligible_recipient: true,
+        is_demo: true,
+        utilization_summary:
+          "Sample Demo Record: No live funds or external links associated with this template.",
+      },
+      {
+        id: 2,
+        name: "[DEMO TEMPLATE] Anganwadi Early Childhood Nutrition Collective",
+        logo_initials: "AEC",
+        description:
+          "Demonstration profile for ICDS Anganwadi early-childhood nutrition and kitchen equipment support.",
+        mission:
+          "Strengthen morning breakfast and hot-cooked meal adequacy across rural Anganwadi centres.",
+        registration_status: "Demo Verification Completed (Sample Profile Only)",
+        registration_reference: null,
+        areas_of_operation: ["Dharwad", "Mysuru"],
+        initiatives_supported: [
+          "Anganwadi Protein & Egg Addition",
+          "Approved Dry Ration & Grocery Support",
+          "Kitchen Digital Scale & Standardized Tray Support",
+        ],
+        contribution_types: [
+          "FOOD_SUPPLIES",
+          "SCHOOL_SPONSORSHIP",
+          "INITIATIVE_SUPPORT",
+        ],
+        official_website: null,
+        contact_email: null,
+        contact_phone: null,
+        verified: true,
+        eligible_recipient: true,
+        is_demo: true,
+        utilization_summary:
+          "Sample Demo Record: Used only to demonstrate ThaliShare filtering and enquiry workflows.",
+      },
+      {
+        id: 3,
+        name: "[DEMO TEMPLATE] Pending Applicant Organization (Unverified Example)",
+        logo_initials: "PAO",
+        description:
+          "Demonstration profile showing an organization whose verification has not yet been completed.",
+        mission:
+          "Applicant awaiting administrative verification of registration documents.",
+        registration_status:
+          "Pending Document Verification — Ineligible for Contributions",
+        registration_reference: null,
+        areas_of_operation: ["Bengaluru Urban"],
+        initiatives_supported: ["School Meal Sponsorship"],
+        contribution_types: ["MONETARY"],
+        official_website: null,
+        contact_email: null,
+        contact_phone: null,
+        verified: false,
+        eligible_recipient: false,
+        is_demo: true,
+        utilization_summary: null,
+      },
+    ],
+    thalishareContributions: [
+      {
+        id: 1,
+        tracking_ref: "TS-DEMO-0001",
+        foundation_id: 1,
+        foundation_name: "[DEMO TEMPLATE] District School Nutrition Partner Trust",
+        foundation_website: null,
+        full_name: "Demo Contributor (Sample Record)",
+        email: "demo.contributor@example.org",
+        phone: "0000000000",
+        contributor_category: "INDIVIDUAL",
+        contribution_type: "SCHOOL_SPONSORSHIP",
+        amount_inr: null,
+        school_id: 1,
+        school_name: "Govt Model Primary School, Malleswaram (SCH-BLR-101)",
+        initiative_name: "Protein & Pulse Supplementation",
+        meals_supported_est: 120,
+        children_reached_est: 60,
+        message: "Sample demo enquiry illustrating contribution tracking.",
+        status: "ENQUIRY_RECORDED",
+        receipt_note:
+          "Demo sample record (is_demo = true). Excluded from verified live platform statistics by default.",
+        utilization_report: "Sample utilization entry for UI demonstration.",
+        is_demo: true,
+      },
+    ],
   };
 }
 
@@ -1055,6 +1166,109 @@ export function handleStaticFallbackRequest(path, options = {}) {
         { id: "comp_5", name: "Bottom-Right Flat Well (Chapati / Fruit / Salad)", shape: "rounded_rect", width_cm: 11.5, height_cm: 11.0, depth_cm: 2.5, volume_ml: 250.0 },
       ],
     };
+  }
+
+  // 10. ThaliShare – Community Contributions
+  if (!store.thalishareFoundations) {
+    const fresh = createInitialStore();
+    store.thalishareFoundations = fresh.thalishareFoundations;
+    store.thalishareContributions = fresh.thalishareContributions;
+    saveStore(store);
+  }
+
+  if (pathname === "/thalishare/foundations" && method === "GET") {
+    return store.thalishareFoundations;
+  }
+
+  if (pathname === "/thalishare/foundations" && method === "POST") {
+    const nf = {
+      id: store.thalishareFoundations.length + 1,
+      ...bodyObj,
+      eligible_recipient: Boolean(bodyObj.verified),
+    };
+    store.thalishareFoundations.push(nf);
+    saveStore(store);
+    return nf;
+  }
+
+  if (pathname === "/thalishare/contributions" && method === "POST") {
+    const fObj = store.thalishareFoundations.find(
+      (f) => f.id === Number(bodyObj.foundation_id)
+    );
+    if (!fObj || !fObj.verified) {
+      throw new Error(
+        "Contributions are only permitted for organizations whose verification has been completed."
+      );
+    }
+    const ref = `TS-20261117-${Math.random().toString(36).slice(2, 8).toUpperCase()}`;
+    const sObj = store.schools.find((s) => s.id === Number(bodyObj.school_id));
+    const nc = {
+      id: store.thalishareContributions.length + 1,
+      tracking_ref: ref,
+      foundation_id: fObj.id,
+      foundation_name: fObj.name,
+      foundation_website: fObj.official_website,
+      full_name: bodyObj.full_name,
+      email: bodyObj.email,
+      phone: bodyObj.phone,
+      contributor_category: bodyObj.contributor_category || "INDIVIDUAL",
+      contribution_type: bodyObj.contribution_type,
+      amount_inr: bodyObj.amount_inr || null,
+      supply_details: bodyObj.supply_details || null,
+      school_id: bodyObj.school_id || null,
+      school_name: sObj ? `${sObj.name} (${sObj.code})` : null,
+      initiative_name: bodyObj.initiative_name || "Child Nutrition Support",
+      meals_supported_est: Number(bodyObj.meals_supported_est || 0),
+      children_reached_est: Number(bodyObj.children_reached_est || 0),
+      message: bodyObj.message || null,
+      status: "ENQUIRY_RECORDED",
+      receipt_note: `Enquiry Reference ${ref} recorded. No online payment was processed on ThaliCheck; please coordinate directly with the verified organization using this reference.`,
+      utilization_report:
+        "Pending confirmation & utilization report from receiving organization.",
+      is_demo: Boolean(bodyObj.is_demo || fObj.is_demo),
+    };
+    store.thalishareContributions.unshift(nc);
+    saveStore(store);
+    return nc;
+  }
+
+  if (pathname === "/thalishare/impact") {
+    const incDemo = url.searchParams.get("include_demo") === "true";
+    const fList = store.thalishareFoundations.filter(
+      (f) => f.verified && (incDemo || !f.is_demo)
+    );
+    const cList = store.thalishareContributions.filter(
+      (c) => incDemo || !c.is_demo
+    );
+    return {
+      include_demo: incDemo,
+      total_contributions_count: cList.length,
+      total_monetary_pledged_inr: cList.reduce(
+        (acc, c) => acc + Number(c.amount_inr || 0),
+        0
+      ),
+      meals_supported: cList.reduce(
+        (acc, c) => acc + Number(c.meals_supported_est || 0),
+        0
+      ),
+      children_reached: cList.reduce(
+        (acc, c) => acc + Number(c.children_reached_est || 0),
+        0
+      ),
+      schools_supported: new Set(
+        cList.filter((c) => c.school_id).map((c) => c.school_id)
+      ).size,
+      active_verified_foundations: fList.length,
+      recent_contributions: cList.slice(0, 10),
+    };
+  }
+
+  if (pathname === "/thalishare/track") {
+    const q = (url.searchParams.get("query") || "").trim().toLowerCase();
+    return store.thalishareContributions.filter(
+      (c) =>
+        c.tracking_ref.toLowerCase() === q || c.email.toLowerCase() === q
+    );
   }
 
   return {};

@@ -209,4 +209,29 @@ export const api = {
       method: "PUT",
       body: JSON.stringify(payload),
     }),
+  getThaliShareFoundations: (params = {}) => {
+    const qs = new URLSearchParams();
+    if (params.location) qs.set("location", params.location);
+    if (params.initiative) qs.set("initiative", params.initiative);
+    if (params.search) qs.set("search", params.search);
+    if (params.verified_only !== undefined)
+      qs.set("verified_only", String(params.verified_only));
+    if (params.include_demo !== undefined)
+      qs.set("include_demo", String(params.include_demo));
+    return request(`/thalishare/foundations?${qs.toString()}`);
+  },
+  createThaliShareFoundation: (payload) =>
+    request("/thalishare/foundations", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+  submitThaliShareContribution: (payload) =>
+    request("/thalishare/contributions", {
+      method: "POST",
+      body: JSON.stringify(payload),
+    }),
+  getThaliShareImpact: (includeDemo = false) =>
+    request(`/thalishare/impact?include_demo=${includeDemo}`),
+  trackThaliShareContribution: (query) =>
+    request(`/thalishare/track?query=${encodeURIComponent(query)}`),
 };

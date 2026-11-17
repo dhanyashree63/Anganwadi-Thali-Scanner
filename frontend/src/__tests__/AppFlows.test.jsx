@@ -4,6 +4,8 @@ import { describe, it, expect } from "vitest";
 import ModelStateBanner from "../components/ModelStateBanner";
 import ImageQualityFeedback from "../components/ImageQualityFeedback";
 import { StatusBadge, ConfidenceBadge } from "../components/StatusBadge";
+import ThaliSharePage from "../pages/ThaliSharePage";
+import { HashRouter } from "react-router-dom";
 
 describe("ThaliCheck Frontend Honesty & Quality Components", () => {
   it("renders DEMO MODE banner when no trained model is active", () => {
@@ -65,5 +67,22 @@ describe("ThaliCheck Frontend Honesty & Quality Components", () => {
     );
     expect(screen.getByText(/POTENTIAL SHORTFALL/i)).toBeInTheDocument();
     expect(screen.getByText(/Confidence: LOW/i)).toBeInTheDocument();
+  });
+
+  it("renders ThaliShare Community Contributions landing heading and sections", () => {
+    render(
+      <HashRouter>
+        <ThaliSharePage user={{ full_name: "Staff User", email: "staff@thalicheck.gov.in", role: "STAFF" }} />
+      </HashRouter>
+    );
+    expect(
+      screen.getByText(/Together, We Can Make Every Meal Better\./i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Participating Foundations & NGO Directory/i)
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/Submit a Community Contribution Enquiry/i)
+    ).toBeInTheDocument();
   });
 });
