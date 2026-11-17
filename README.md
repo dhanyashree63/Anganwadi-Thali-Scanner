@@ -24,13 +24,13 @@ Authorized ground staff capture a single photo of a served meal on a standardize
 
 ## 📸 Screenshots & UI Preview
 
-| Staff Meal Capture & AI Analysis | Sector Officer Monitoring Dashboard |
+| Staff Dashboard & Meal Submissions | District Officer Monitoring Dashboard |
 | :---: | :---: |
-| ![Meal Capture Preview](https://via.placeholder.com/600x350/0f172a/ffffff?text=ThaliCheck+Staff+Capture+%26+AI+Analysis) | ![Officer Dashboard Preview](https://via.placeholder.com/600x350/1e293b/ffffff?text=ThaliCheck+Officer+Monitoring+Dashboard) |
+| ![Staff Dashboard](docs/screenshots/staff_dashboard.png) | ![Officer Dashboard](docs/screenshots/officer_dashboard.png) |
 
-| ThaliShare Community Portal | Light & Dark Mode |
+| ThaliShare Community Portal | Login & Light/Dark Theme Support |
 | :---: | :---: |
-| ![ThaliShare Preview](https://via.placeholder.com/600x350/15803d/ffffff?text=ThaliShare+Community+Contributions) | ![Theme Preview](https://via.placeholder.com/600x350/0f172a/fcd34d?text=Light+%26+Dark+Theme+Toggle) |
+| ![ThaliShare Community Portal](docs/screenshots/thalishare_portal.png) | ![Login Screen & Theme Toggle](docs/screenshots/login_screen.png) |
 
 ---
 
