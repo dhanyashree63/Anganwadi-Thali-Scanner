@@ -132,7 +132,7 @@ export default function AnganwadiThaliScannerMotion({ className = "", compact = 
         {!compact && (
           <>
             {/* Top Left Floating Badge */}
-            <div className="absolute -top-3 -left-4 z-30 animate-float-badge-1 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-emerald-200 dark:border-emerald-800 rounded-xl px-3 py-1.5 shadow-lg flex items-center gap-2">
+            <div className="hidden sm:flex absolute -top-3 left-2 z-30 animate-float-badge-1 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-emerald-200 dark:border-emerald-800 rounded-xl px-3 py-1.5 shadow-lg items-center gap-2">
               <span className="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping" />
               <div className="text-left">
                 <div className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300">
@@ -145,7 +145,7 @@ export default function AnganwadiThaliScannerMotion({ className = "", compact = 
             </div>
 
             {/* Top Right Floating Badge */}
-            <div className="absolute -top-3 -right-4 z-30 animate-float-badge-2 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-indigo-200 dark:border-indigo-800 rounded-xl px-3 py-1.5 shadow-lg flex items-center gap-2">
+            <div className="hidden sm:flex absolute -top-3 right-2 z-30 animate-float-badge-2 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-indigo-200 dark:border-indigo-800 rounded-xl px-3 py-1.5 shadow-lg items-center gap-2">
               <span className="text-sm">🌾</span>
               <div className="text-left">
                 <div className="text-[11px] font-bold text-indigo-700 dark:text-indigo-300">
@@ -158,8 +158,8 @@ export default function AnganwadiThaliScannerMotion({ className = "", compact = 
             </div>
 
             {/* Bottom Floating Badge */}
-            <div className="absolute -bottom-4 z-30 animate-float-badge-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 shadow-xl flex items-center gap-3">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-emerald-700 text-white font-bold text-xs shadow-sm">
+            <div className="hidden sm:flex absolute -bottom-3 left-1/2 -translate-x-1/2 z-30 animate-float-badge-3 bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-1.5 shadow-xl items-center gap-3">
+              <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-700 text-white font-bold text-xs shadow-sm">
                 TC
               </div>
               <div className="text-left">
